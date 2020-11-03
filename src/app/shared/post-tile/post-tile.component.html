@@ -15,15 +15,15 @@
             <a class="postname" href="{{ post.url }}">{{ post.postName }}</a>
         </div>
         <div>
-            <p class="post-text">{{ post.description }}</p>
+            <p class="post-text" [innerHTML]="post.description"></p>
         </div>
         <hr />
         <span>
             <a class="btnCommments" role="button">
                 <fa-icon [icon]="faComments"></fa-icon>
-                Comments({{post.commentNum}})
+                Comments({{post.commentCount}})
             </a>
-            <button class="login" (click)="goToPost(post.id)">
+            <button class="login">
                 Read Post
             </button>
         </span>
