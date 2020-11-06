@@ -24,6 +24,7 @@ import { ListSubredditsComponent } from './subreddit/list-subreddits/list-subred
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ViewPostComponent } from './post/view-post/view-post.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FontAwesomeModule,
-    EditorModule
+    EditorModule,
+    NgbModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
