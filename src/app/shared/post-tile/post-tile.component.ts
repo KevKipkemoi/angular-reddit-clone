@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./post-tile.component.scss']
 })
 export class PostTileComponent implements OnInit {
-  @Input() data: Array<PostModel>;
+  @Input() posts: PostModel[];
   faComments = faComments;
 
   constructor(private router: Router) { }
