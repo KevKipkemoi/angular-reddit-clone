@@ -26,4 +26,11 @@ export class HeaderComponent implements OnInit {
   goToUserProfile() {
     this.router.navigateByUrl('/user-profile/' + this.username);
   }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('').then(() => {
+      window.location.reload();
+    });
+  }
 }
