@@ -68,7 +68,7 @@ export class AuthService {
   }
 
   logout() {
-    this.HttpClient.post(
+    this.http.post(
       'http://localhost:8080/api/auth/logout',
       this.refreshTokenPayload,
       { responseType: 'text' }
