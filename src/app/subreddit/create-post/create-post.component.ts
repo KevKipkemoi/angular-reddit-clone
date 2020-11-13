@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { PostService } from 'src/app/shared/post.service';
+import { SubredditModel } from '../subreddit-response';
 import { SubredditService } from '../subreddit.service';
 import { CreatePostPayload } from './create-post.payload';
 
@@ -14,7 +15,7 @@ import { CreatePostPayload } from './create-post.payload';
 export class CreatePostComponent implements OnInit {
   createPostForm: FormGroup;
   postPayload: CreatePostPayload;
-  subreddits: Array<any>;
+  subreddits: Array<SubredditModel>;
 
   constructor(
     private router: Router,
@@ -54,7 +55,7 @@ export class CreatePostComponent implements OnInit {
       this.router.navigateByUrl('/');
     }, error => {
       throwError(error);
-    })
+    });
   }
 
   discardPost() {
