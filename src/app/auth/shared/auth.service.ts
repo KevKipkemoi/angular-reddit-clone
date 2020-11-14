@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { SignupRequestPayload } from '../signup-request.payload';
 import { LocalStorageService } from 'ngx-webstorage';
 import { LoginRequestPayload } from '../login/login-request.payload';
@@ -70,7 +70,7 @@ export class AuthService {
   logout() {
     this.http.post(
       'http://localhost:8080/api/auth/logout',
-      this.refreshTokenPayload,
+      this.refreshToken,
       { responseType: 'text' }
     ).subscribe(data => {
       console.log(data);

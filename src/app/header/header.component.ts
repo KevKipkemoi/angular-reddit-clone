@@ -11,7 +11,7 @@ import { AuthService } from '../auth/shared/auth.service';
 export class HeaderComponent implements OnInit {
   faUser = faUser;
   isLoggedIn: boolean;
-  username: string;
+  username: any;
 
   constructor(
     private authService: AuthService,

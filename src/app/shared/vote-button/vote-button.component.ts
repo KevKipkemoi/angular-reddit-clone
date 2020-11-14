@@ -7,6 +7,7 @@ import { PostService } from '../post.service';
 import { ToastrService } from 'ngx-toastr';
 import { VoteType } from './vote-type';
 import { throwError } from 'rxjs';
+import { VoteService } from '../vote.service';
 
 @Component({
   selector: 'app-vote-button',
